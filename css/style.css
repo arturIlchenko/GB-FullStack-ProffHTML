@@ -254,7 +254,7 @@ body {
 .header__cart {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 29px;
   left: -20px;
   width: 262px;
   background-color: #ffffff;
