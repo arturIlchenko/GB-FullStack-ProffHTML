@@ -123,6 +123,7 @@
   border: 1px solid #e8e8e8;
   border-radius: 5px;
   display: none;
+  z-index: 3;
 
   &:before {
     content: '';

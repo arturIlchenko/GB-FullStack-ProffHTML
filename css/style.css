@@ -204,7 +204,8 @@ body {
   background-color: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 5px;
-  display: none; }
+  display: none;
+  z-index: 3; }
   .header-menu:before {
     content: '';
     width: 10px;
