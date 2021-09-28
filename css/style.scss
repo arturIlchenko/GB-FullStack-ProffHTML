@@ -116,7 +116,6 @@ body {
 }
 
 
-
 .button {
   padding: 12px 20px;
   font-size: 15px;
@@ -326,8 +325,15 @@ body {
   &:hover &__image {
     filter: brightness(30%);
   }
+  &:hover &__image-wrap {
+    filter: brightness(30%);
+  }
 
   &__box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
   }
 
   &__link {
@@ -354,14 +360,25 @@ body {
   &__link-text {
     font-weight: 700;
     color: #ffffff;
+    margin: 0;
   }
 
   &__image {
     width: 261px;
+    &-wrap {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      background-color: #e9e9e9;
+      padding: 5px;
+      flex: 1;
+    }
   }
 
   &__text {
     padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
   }
 
   &__name {
@@ -462,33 +479,40 @@ body {
 
 .breadcrumbs {
   background-color: #f8f3f4;
+
   &__wrap {
     display: flex;
     justify-content: space-between;
     height: 148px;
     align-items: center;
   }
+
   &__name-page {
     @include fntf(24px, 900, 1);
     text-transform: uppercase;
     color: $mcolor;
   }
+
   &__links {
   }
+
   &__link {
     @include fntf(14px, 300, 1);
     text-transform: uppercase;
     color: #636363;
+
     &:hover {
       color: $mcolor;
     }
   }
+
   &__link_active {
     @include fntf(14px, 700, 1);
     text-transform: uppercase;
     color: $mcolor;
   }
 }
+
 .slider {
   background-color: #f7f7f7;
   border: 1px solid #eaeaea;
@@ -497,16 +521,20 @@ body {
   padding: 0 0 80px 0;
   position: relative;
 }
+
 .carousel {
   width: 597px;
 }
+
 .product-card {
   position: relative;
   margin: -60px;
+
   &__wrap {
     background-color: #fff;
     border: 1px solid #eaeaea;
   }
+
   &__block {
     margin: 0 auto;
     width: 642px;
@@ -516,6 +544,7 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   &__top {
     border-bottom: 1px solid #eaeaea;
     padding-bottom: 43px;
@@ -523,69 +552,85 @@ body {
     flex-direction: column;
     align-items: center;
   }
+
   &__category {
     @include fntf(14px, 770, 1);
     color: $mcolor;
   }
+
   &__category-line {
     width: 63px;
     height: 3px;
     background-color: $mcolor;
   }
+
   &__heading {
     margin-top: 14px;
     @include fntf(18px, 900, 1);
     text-transform: uppercase;
     color: #4d4d4d;
   }
+
   &__description {
     margin-top: 67px;
     @include fntf(14px, 300, 1);
     color: #5e5e5e;
     line-height: 24px;
   }
+
   &__features {
     display: flex;
     justify-content: center;
+
     &-item {
       @include fntf(14px, 700, 1);
       color: #b9b9b9;
       margin-right: 44px;
+
       &:last-of-type {
         margin-right: 0;
       }
     }
   }
+
   &__features-value {
     color: #2f2f2f;
   }
+
   &__price {
     @include fntf(24px, 700, 1);
     color: $mcolor;
     margin-top: 37px;
   }
+
   &__choose {
     margin-top: 63px;
+
     form {
 
     }
+
     &-box {
       display: flex;
       justify-content: space-between;
     }
+
     fieldset {
       display: flex;
       flex-direction: column;
       margin-right: 53px;
+
       &:last-of-type {
         margin-right: 0;
       }
     }
+
     legend {
       @include fntf(14px, 700, 1);
       color: #2f2f2f;
       text-align: left;
     }
+
     select {
       background-color: #ffffff;
       border: 1px solid #eaeaea;
@@ -593,6 +638,7 @@ body {
       padding: 12px;
       width: 144px;
     }
+
     input {
       background-color: #ffffff;
       border: 1px solid #eaeaea;
@@ -602,6 +648,7 @@ body {
 
     }
   }
+
   &__button {
     width: 100%;
     margin-top: 28px;
@@ -610,9 +657,55 @@ body {
     justify-content: center;
     align-items: center;
     @include fntf(16px, 700, 1);
+
     .fa-shopping-cart {
       font-size: 26px;
       margin-right: 15px;
+    }
+  }
+}
+.also {
+  margin-top: 119px;
+  &__wrap {
+  }
+  &__heading {
+    @include fntf(24px, 900, 1);
+    text-transform: uppercase;
+    color: #4d4d4d;
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 72px;
+  }
+  &__item {
+    width: 263px;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    &-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e9e9e9;
+      width: 100%;
+      padding: 5px;
+      flex: 1;
+    }
+    &-description {
+      padding: 18px 15px 21px 15px;
+    }
+    &-name {
+      @include fntf(14px, 400, 1);
+      text-transform: uppercase;
+      color: #6f6e6e;
+    }
+    &-price {
+      @include fntf(16px, 700, 1);
+      text-transform: uppercase;
+      color: $mcolor;
+      margin-top: 17px;
     }
   }
 }
